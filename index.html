@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aphelion — Solar System Simulator</title>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="scene"></canvas>
+
+      <div id="loading">
+        <div class="loading-inner">
+          <div class="loading-title">APHELION</div>
+          <div class="loading-bar"><div class="loading-bar-fill" id="loading-fill"></div></div>
+          <div class="loading-status" id="loading-status">Igniting stars…</div>
+        </div>
+      </div>
+
+      <div id="ui" class="hidden">
+        <div id="hud-top">
+          <div id="title-block">
+            <div id="title">APHELION</div>
+            <div id="subtitle">Solar System Simulator</div>
+          </div>
+          <div id="body-nav"></div>
+        </div>
+
+        <div id="info-panel" class="hidden">
+          <button id="info-close" aria-label="Close">×</button>
+          <div id="info-name"></div>
+          <div id="info-type"></div>
+          <div id="info-stats"></div>
+          <div id="info-desc"></div>
+        </div>
+
+        <div id="hint" class="hint">Click a world to explore · Drag to orbit · Scroll to zoom</div>
+
+        <div id="hud-bottom">
+          <button id="btn-play" class="control-btn" title="Play / Pause">⏸</button>
+          <div id="speed-block">
+            <span id="speed-label">1 day / sec</span>
+            <input type="range" id="speed-slider" min="0" max="6" step="0.01" value="2" />
+          </div>
+          <button id="btn-labels" class="control-btn toggle-btn active" title="Toggle labels">Labels</button>
+          <button id="btn-orbits" class="control-btn toggle-btn active" title="Toggle orbit paths">Orbits</button>
+          <button id="btn-freecam" class="control-btn toggle-btn" title="Reset camera">Free&nbsp;Cam</button>
+          <button id="btn-sound" class="control-btn toggle-btn" title="Toggle ambient sound">🔈</button>
+        </div>
+
+        <div id="labels-layer"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
